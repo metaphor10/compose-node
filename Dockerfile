@@ -1,8 +1,9 @@
-FROM node:boron 
+FROM node:boron
+RUN mkdir /code
 WORKDIR /code
 COPY package.json .
 
-RUN npm install 
+RUN npm install
 COPY . .
 RUN ls -a
 CMD ["npm", "start"]
